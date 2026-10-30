@@ -1,0 +1,22 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "sensor-decoder"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pyarrow>=17", "pyspark>=4.0"]
+
+[tool.maturin]
+python-source = "python"
+module-name = "sensor._sensor"
+features = ["pyo3/extension-module"]
+
+[tool.uv]
+cache-keys = ["Cargo.lock", "Cargo.toml", "src/**"]
+
+[dependency-groups]
+dev = [
+    "maturin>=1.13.1",
+]

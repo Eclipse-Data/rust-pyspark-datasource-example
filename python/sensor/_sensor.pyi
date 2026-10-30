@@ -1,0 +1,3 @@
+import pyarrow as pa
+
+def decode_records(data: bytes) -> pa.RecordBatch: ...

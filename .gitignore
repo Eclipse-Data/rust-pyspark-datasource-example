@@ -1,0 +1,18 @@
+# Rust
+/target/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+*.egg-info/
+dist/
+
+# Generated sample data
+*.sensor
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
